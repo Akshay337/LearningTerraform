@@ -6,6 +6,7 @@ resource "aws_instance" "my-instance" {
   ami           = "ami-00ca570c1b6d79f36"
   instance_type = "t3.micro"
   tags = {
-    "Name" = "MyEC2Instance2"
+    "Name" = "MyEC2Instance"
+    "Type" = "Learning"
   }
 }
