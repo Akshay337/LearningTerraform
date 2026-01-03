@@ -3,10 +3,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "my-instance" {
+  count = 3 
   ami           = "ami-00ca570c1b6d79f36"
   instance_type = "t3.micro"
   tags = {
-    "Name" = "MyEC2Instance"
+    "Name" = "MyEC2Instance ${count.index}"
     "Type" = "Learning"
   }
 }
